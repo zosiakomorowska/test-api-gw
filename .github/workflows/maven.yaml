@@ -98,7 +98,7 @@ jobs:
       - name: Build with Maven
         run: mvn verify
       - name: Upload JAR file
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: app
           path: target/*.jar
@@ -115,7 +115,7 @@ jobs:
         with:
           driver-opts: network=host
       - name: Download JAR file
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: app
           path: target/
